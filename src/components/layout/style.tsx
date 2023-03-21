@@ -1,29 +1,26 @@
+// @ts-ignore
 import styled from 'styled-components';
 
 
-export const SiteLayoutContent = styled.div min-height: 280px; padding: 24px;;
+export const Main = styled.div`
+  .ant-layout-content { padding: 0 !important; }
 
+
+`
+
+
+
+
+export const SiteLayoutContent = styled.div`
+  height: 100vh;
+  width: 100%;
+  
+
+`
 
 export const LogoContainer = styled.div`
-float: left;
-width: 120px;
-height: 31px;
-margin: 16px 24px 16px 0;
-background: rgba(255, 255, 255, 0.3);
-
-@media (min-width: 576px) and (max-width: 991px) {
-float: none;
-margin: 16px auto;
-display: block;
-}
-
-@media (max-width: 575px) {
-float: none;
-margin: 16px auto;
-display: block;
-width: 100%;
-text-align: center;
-}
+  float: left;
+  background-color: #FFF;
+  height: 100%;
 `;
 
-export const LogoContainerRTL = styled(LogoContainer) float: right; margin: 16px 0 16px 24px;
