@@ -39,9 +39,9 @@ export const Main = styled.div`
   
   width: 100%;
   height: 80px; /* change the height of the waves here */
-  position: relative;
+  position: fixed;
+  bottom: 0;
   overflow-x: hidden;
-  
   
   
   .wave {
