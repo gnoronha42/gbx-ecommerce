@@ -1,48 +1,105 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import profilePicture from "../../assets/eu.png";
-import {ContentBlank, ContentStyle, Main} from "./style";
+import {ContentBlank, ContentStyle, Main,Information} from "./style";
+import {useTranslation} from "react-i18next";
+import {LinkedinOutlined} from "@ant-design/icons";
+import {GithubOutlined} from "@ant-design/icons";
+import {WhatsAppOutlined} from "@ant-design/icons";
+import {List,Button, Modal} from "antd";
 import {useQuery} from "react-query";
 
-
-
-
 const Home: React.FC = () => {
+    const {t} = useTranslation()
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
 
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
 
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+    const {data, isLoading, error} = useQuery('repos', () => {
+        return fetch('https://api.github.com/users/gnoronha42/repos')
+            .then(res => res.json())
+            .then(data => data)
 
+    })
+
+     useEffect(() => {
+      console.log(data)
+    }, [data])
 
 
     return (
-        <div
-            style={{
-                width: "100%",
-                height: "100%",
-            }}
-        >
-
+        <div>
             <ContentStyle>
                 <ContentBlank>
+                    <Information>
                     <img className="circle"
                          src={profilePicture}
                          alt={'profile'}/>
                     <div
                         className={'profileTitle'}
-                    >Gabriel Ximenes<br/> Full-Stack Developer</div>
+                    >Gabriel Ximenes<br/> {t('developer')}</div>
+                    <div className={'contact-info'} >
+                        <LinkedinOutlined />
+                        <GithubOutlined />
+                        <WhatsAppOutlined />
+                    </div>
+                    <div>
+                        <div className='repos' >
+                            <Button type="primary" onClick={showModal}>
+                                {t('repos.title')}
+                            </Button>
+                            <Modal title={t('repos.title')} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                                <List
+                                    size="small"
+                                    bordered
+                                    dataSource={data}
+                                    renderItem={(item: any) => <List.Item>{item.name}</List.Item>}
+                                />
+                            </Modal>
+                            <Button type="primary" onClick={showModal}>
+                                {t('skills')}
+                            </Button>
+                            <Modal title={t('repos.title')} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                                {/*<List*/}
+                                {/*    size="small"*/}
+                                {/*    bordered*/}
+                                {/*    dataSource={data}*/}
+                                {/*    renderItem={(item: any) => <List.Item>{item.name}</List.Item>}*/}
+                                {/*/>*/}
+                            </Modal>
+                            <Button type="primary" onClick={showModal}>
+                                {t('resume')}
+                            </Button>
+                            <Modal title={t('repos.title')} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                                <List
+                                    size="small"
+                                    bordered
+                                    dataSource={data}
+                                    renderItem={(item: any) => <List.Item>{item.name}</List.Item>}
+                                />
+                            </Modal>
+
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    </Information>
+
                     <Main>
                         <div className="wave"/>
                         <div className="wave"/>
                         <div className="wave"/>
                     </Main>
                 </ContentBlank>
-                <div>
-                    <div>
-                        <h1>Contact</h1>
-                         Email: gabrielnoronha.developer@gmail.com
-                         Phone: +55 11 9 9999-9999
-                         Linkedin: https://www.linkedin.com/in/gabriel-ximenes-9b5b3b1b3/
-                    </div>
-                </div>
+
             </ContentStyle>
 
         </div>

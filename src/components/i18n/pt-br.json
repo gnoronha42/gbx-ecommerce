@@ -1,0 +1,15 @@
+{
+  "common": {
+    "developer": "Desenvolvedor Full-Stack",
+    "developer_description": "Desenvolvedor Full-Stack com experiência em desenvolvimento de aplicações web e mobile, utilizando as tecnologias mais atuais do mercado. Possuo conhecimento em desenvolvimento de aplicações utilizando as linguagens Java, JavaScript, PHP, Python e Ruby. Também possuo conhecimento em desenvolvimento de aplicações utilizando as tecnologias React, React Native, NodeJS, Laravel, Django, Ruby on Rails, entre outras.",
+    "resume": "Currículo",
+    "skills": "Habilidades",
+
+    "repos": {
+      "title": "Repositorios"
+    }
+
+  }
+
+
+}

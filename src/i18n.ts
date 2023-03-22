@@ -1,5 +1,7 @@
-import 'react-i18next';
-import en from '../src/components/I18n/en.json'
+
+import 'react-i18next'
+import en from '../src/components/i18n/en-us.json'
+
 
 declare module 'react-i18next' {
     interface CustomTypeOptions  {
