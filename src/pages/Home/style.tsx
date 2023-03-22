@@ -4,10 +4,16 @@ export const ContentStyle = styled.div``;
 
 export const Information = styled.div`
   display: flex;
-  position: relative;
   flex-direction: column;
+  gap: 15px;
   align-items: center;
   text-align: center;
+  .repos{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+  }
+  
 `;
 
 export const ContentBlank = styled.div`
@@ -16,12 +22,15 @@ export const ContentBlank = styled.div`
   align-content: center;
  display: grid;
   .contact-info {
+    display: flex;
+    gap: 15%;
     font-size: medium;
+    
   }
 
 
-  .profileTitle {s
-  font-weight: 700;
+  .profileTitle {
+   font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
   }
