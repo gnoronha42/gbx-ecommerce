@@ -1,37 +1,74 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const WaveWrapper = styled.div`
+export const ContentStyle = styled.div``;
+
+export const Information = styled.div`
+  display: flex;
   position: relative;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 `;
 
-const WaveWrapperInner = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
+export const ContentBlank = styled.div`
+  height: 100vh;
+  background-color: #a068ff;
+  align-content: center;
+ display: grid;
+  .contact-info {
+    font-size: medium;
+  }
+
+
+  .profileTitle {s
+  font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .circle {
+  
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    
+  }
 `;
 
-const Wave = styled.div`
-  position: absolute;
+export const Main = styled.div`
+  
+  width: 100%;
+  height: 80px; /* change the height of the waves here */
+  position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 15%;
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-`;
+  overflow-x: hidden;
+  
+  
+  .wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
 
-const WaveTop = styled(Wave)`
-  background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
-`;
+  .wave:nth-of-type(2) {
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+  }
 
-const WaveMiddle = styled(Wave)`
-  background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
-`;
+  .wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+  }
 
-const WaveBottom = styled(Wave)`
-  background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
+  @keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
+  }
+
 `;
