@@ -2,13 +2,24 @@
   "common": {
     "developer": "Full-Stack Developer",
     "resume": "Resume",
-    "developer_description": "I am a Full-Stack Developer with 3+ years of experience in web development. I have worked on a wide range of technologies and frameworks. I am passionate about building scalable and maintainable web applications. I am a quick learner and a team player. I am always looking for opportunities to learn and grow.",
+    "developer_description": "I am a Full-Stack Developer with 5 years of experience in web development. I have worked on a wide range of technologies and frameworks. I am passionate about building scalable and maintainable web applications. I am a quick learner and a team player. I am always looking for opportunities to learn and grow.",
     "skills": "Skills",
     "repos": {
       "title": "Repository "
+    },
+    "skills_list": {
+      "front_end_skills": {
+        "title": "Front Skills",
+        "front_end_skills_list": "React, Angular, Vue, Redux, React Query,React Native"
+      },
+      "back_end_skills": {
+        "title": "Back End Skills",
+        "back_end_skills_list": "Java, Spring Boot, Node.js."
+      },
+      "other_skills": {
+        "title": "Other Skills",
+        "other_skills_list": "Docker, Jenkins, Git, GitLab, Cypress."
+      }
     }
-
   }
-
-
 }

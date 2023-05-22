@@ -12,18 +12,23 @@ import { CV } from "../../assets";
 const Home: React.FC = () => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpenSkills, setIsModalOpenSkills] = useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);
+  };
+  const showModalSkills = () => {
+    setIsModalOpenSkills(true);
   };
 
   const handleOk = () => {
     setIsModalOpen(false);
   };
 
-  const handleCancel = () => {
-    setIsModalOpen(false);
+  const handleOkSkills = () => {
+    setIsModalOpenSkills(false);
   };
+
   const { data, isLoading, error } = useQuery("repos", () => {
     return fetch("https://api.github.com/users/gnoronha42/repos")
       .then((res) => res.json())
@@ -35,9 +40,7 @@ const Home: React.FC = () => {
     window.open(url, "_blank");
   };
 
-  useEffect(() => {
-    // console.log(data);
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return (
     <div>
@@ -63,7 +66,6 @@ const Home: React.FC = () => {
                   title={t("repos.title")}
                   open={isModalOpen}
                   onOk={handleOk}
-                  onCancel={handleCancel}
                 >
                   <List
                     size="small"
@@ -74,21 +76,28 @@ const Home: React.FC = () => {
                     )}
                   />
                 </Modal>
-                <Button type="primary" onClick={showModal}>
+                <Button type="primary" onClick={showModalSkills}>
                   {t("skills")}
                 </Button>
                 <Modal
-                  title={t("repos.title")}
-                  open={isModalOpen}
-                  onOk={handleOk}
-                  onCancel={handleCancel}
+                  title={t("skills")}
+                  open={isModalOpenSkills}
+                  onOk={handleOkSkills}
                 >
-                  {/*<List*/}
-                  {/*    size="small"*/}
-                  {/*    bordered*/}
-                  {/*    dataSource={data}*/}
-                  {/*    renderItem={(item: any) => <List.Item>{item.name}</List.Item>}*/}
-                  {/*/>*/}
+                  <List>
+                    <h2>{t("skills_list.front_end_skills.title")}</h2>
+                    <List.Item>
+                      {t("skills_list.front_end_skills.front_end_skills_list")}
+                    </List.Item>
+                    <h2>{t("skills_list.back_end_skills.title")}</h2>
+                    <List.Item>
+                      {t("skills_list.back_end_skills.back_end_skills_list")}
+                    </List.Item>
+                    <h2>{t("skills_list.other_skills.title")}</h2>
+                    <List.Item>
+                      {t("skills_list.other_skills.other_skills_list")}
+                    </List.Item>
+                  </List>
                 </Modal>
                 <Button type="primary" onClick={handleDownload}>
                   {t("resume")}
@@ -97,7 +106,6 @@ const Home: React.FC = () => {
                   title={t("repos.title")}
                   open={isModalOpen}
                   onOk={handleOk}
-                  onCancel={handleCancel}
                 >
                   <List
                     size="small"
