@@ -39,9 +39,9 @@ const LayoutMain: React.FC<IComponentBase> = ({ children, ...props }) => {
             </Link>
           </LogoContainer>
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item>
+            {/* <Menu.Item>
               <Link to="/ecommerce">Ecommerce</Link>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item>
               <Select
                 style={{

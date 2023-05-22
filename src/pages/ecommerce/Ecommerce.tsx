@@ -12,7 +12,7 @@ const contentStyle: React.CSSProperties = {
 };
 
 const Ecommerce = () => {
-  const { data, isLoading, error } = useQuery("repos", () => {
+  const { data, isLoading, error } = useQuery("products", () => {
     return fetch("http://localhost:3001/products")
       .then((res) => res.json())
       .then((data) => data);
@@ -40,7 +40,7 @@ const Ecommerce = () => {
       </Carousel>
 
       <Grid>
-        {data.map((item: any) => {
+        {/* {data.map((item: any) => {
           return (
             <Card key={item.id}>
               <h1>{item.name}</h1>
@@ -48,7 +48,7 @@ const Ecommerce = () => {
               <p>{item.price}</p>
             </Card>
           );
-        })}
+        })} */}
       </Grid>
     </div>
   );

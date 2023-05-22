@@ -4,12 +4,22 @@
     "developer_description": "Desenvolvedor Full-Stack com experiência em desenvolvimento de aplicações web e mobile, utilizando as tecnologias mais atuais do mercado. Possuo conhecimento em desenvolvimento de aplicações utilizando as linguagens Java, JavaScript, PHP, Python e Ruby. Também possuo conhecimento em desenvolvimento de aplicações utilizando as tecnologias React, React Native, NodeJS, Laravel, Django, Ruby on Rails, entre outras.",
     "resume": "Currículo",
     "skills": "Habilidades",
-
     "repos": {
       "title": "Repositorios"
+    },
+    "skills_list": {
+      "front_end_skills": {
+        "title": "Habilidades Front-end",
+        "front_end_skills_list": "React, Angular, Vue, Redux, React Query, React Native"
+      },
+      "back_end_skills": {
+        "title": "Habilidades Back-end",
+        "back_end_skills_list": "Java, Spring Boot, Node.js."
+      },
+      "other_skills": {
+        "title": "Outras Habilidades",
+        "other_skills_list": "Docker, Jenkins, Git, GitLab, Cypress."
+      }
     }
-
   }
-
-
 }
