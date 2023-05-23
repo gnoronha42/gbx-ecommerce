@@ -29,7 +29,7 @@ const Home: React.FC = () => {
     setIsModalOpenSkills(false);
   };
 
-  const { data, isLoading, error } = useQuery("repos", () => {
+  const { data } = useQuery("repos", () => {
     return fetch("https://api.github.com/users/gnoronha42/repos")
       .then((res) => res.json())
       .then((data) => data);
