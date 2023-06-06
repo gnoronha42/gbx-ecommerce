@@ -66,6 +66,7 @@ const Home: React.FC = () => {
                   title={t("repos.title")}
                   open={isModalOpen}
                   onOk={handleOk}
+                  onCancel={handleOk}
                 >
                   <List
                     size="small"
@@ -83,6 +84,7 @@ const Home: React.FC = () => {
                   title={t("skills")}
                   open={isModalOpenSkills}
                   onOk={handleOkSkills}
+                  onCancel={handleOkSkills}
                 >
                   <List>
                     <h2>{t("skills_list.front_end_skills.title")}</h2>
@@ -106,6 +108,7 @@ const Home: React.FC = () => {
                   title={t("repos.title")}
                   open={isModalOpen}
                   onOk={handleOk}
+                  onCancel={handleOk}
                 >
                   <List
                     size="small"
