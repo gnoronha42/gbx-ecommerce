@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ecommerce-gbx/static/css/main.9071bff3.css",
-    "main.js": "/ecommerce-gbx/static/js/main.5aec8bb3.js",
+    "main.js": "/ecommerce-gbx/static/js/main.0a850032.js",
     "static/js/787.ec79540e.chunk.js": "/ecommerce-gbx/static/js/787.ec79540e.chunk.js",
     "static/media/eu.png": "/ecommerce-gbx/static/media/eu.73fc6453145a7cd9a5c9.png",
     "static/media/CV-Gabriel-XM-CA-5.png": "/ecommerce-gbx/static/media/CV-Gabriel-XM-CA-5.720ab3bf3581025d1186.png",
@@ -10,11 +10,11 @@
     "static/media/brasil-flag.svg": "/ecommerce-gbx/static/media/brasil-flag.100516bc4bddde66b73f49ddb2472cb1.svg",
     "index.html": "/ecommerce-gbx/index.html",
     "main.9071bff3.css.map": "/ecommerce-gbx/static/css/main.9071bff3.css.map",
-    "main.5aec8bb3.js.map": "/ecommerce-gbx/static/js/main.5aec8bb3.js.map",
+    "main.0a850032.js.map": "/ecommerce-gbx/static/js/main.0a850032.js.map",
     "787.ec79540e.chunk.js.map": "/ecommerce-gbx/static/js/787.ec79540e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9071bff3.css",
-    "static/js/main.5aec8bb3.js"
+    "static/js/main.0a850032.js"
   ]
 }
