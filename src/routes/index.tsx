@@ -4,7 +4,7 @@ import GbxPagesRoutes from "./routes.gbx";
 const GbxRoutes: React.FC = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/ecommerce-gbx">
         <GbxPagesRoutes />
       </BrowserRouter>
     </>
