@@ -41,7 +41,9 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {}, [data]);
-
+  useEffect(() => {
+    document.title = "Gabriel Ximenes";
+  }, []);
   return (
     <div>
       <ContentStyle>
@@ -53,9 +55,15 @@ const Home: React.FC = () => {
               <br /> {t("developer")}
             </div>
             <div className={"contact-info"}>
-              <LinkedinOutlined />
-              <GithubOutlined />
-              <WhatsAppOutlined />
+              <a href="https://www.linkedin.com/in/gabriel-mitozo-2b6568191/">
+                <LinkedinOutlined />
+              </a>
+              <a href="https://wa.me/5592991805721">
+                <WhatsAppOutlined />
+              </a>
+              <a href="https://github.com/gnoronha42">
+                <GithubOutlined />
+              </a>
             </div>
             <div>
               <div className="repos">

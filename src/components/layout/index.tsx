@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Menu, Select } from "antd";
 import { LogoContainer, Main, SiteLayoutContent } from "./style";
-import logo from "../../assets/G.svg";
+import logo from "../../assets/gbx-foto.png";
 import { availableLanguages } from "../i18n";
 import { useTranslation } from "react-i18next";
 import { BraFlag, EuaFlag } from "../../assets";
