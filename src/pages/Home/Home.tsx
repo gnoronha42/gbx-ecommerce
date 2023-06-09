@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenSkills, setIsModalOpenSkills] = useState(false);
-
+  ///change something here
   const showModal = () => {
     setIsModalOpen(true);
   };
