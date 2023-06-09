@@ -119,8 +119,6 @@ const Home: React.FC = () => {
                     )}
                   />
                 </Modal>
-
-                <div></div>
               </div>
             </div>
           </Information>

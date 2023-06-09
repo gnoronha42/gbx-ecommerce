@@ -11,7 +11,7 @@ interface IComponentBase {
   children: React.ReactNode;
 }
 
-const LayoutMain: React.FC<IComponentBase> = ({ children, ...props }) => {
+const LayoutMain: React.FC<IComponentBase> = ({ children }) => {
   const { i18n } = useTranslation();
   const arr = [BraFlag, EuaFlag];
   const [languages, setLanguages] = useState<number>(0);
@@ -39,10 +39,7 @@ const LayoutMain: React.FC<IComponentBase> = ({ children, ...props }) => {
             </Link>
           </LogoContainer>
           <Menu theme="dark" mode="horizontal">
-            {/* <Menu.Item>
-              <Link to="/ecommerce">Ecommerce</Link>
-            </Menu.Item> */}
-            <Menu.Item>
+            <Menu.Item key={"1"}>
               <Select
                 style={{
                   width: 120,
@@ -50,9 +47,9 @@ const LayoutMain: React.FC<IComponentBase> = ({ children, ...props }) => {
                 onChange={(e) => handleChange(e)}
               >
                 {availableLanguages.map((language: any, key: any) => (
-                  <option value={language} key={key}>
+                  <Select.Option value={language} key={key}>
                     {languageN.get(language)}
-                  </option>
+                  </Select.Option>
                 ))}
               </Select>
             </Menu.Item>
