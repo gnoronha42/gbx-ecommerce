@@ -7,7 +7,7 @@ const GbxPagesRoutes: React.FC = () => {
   return (
     <LayoutMain>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/gbx-ecommerce" element={<Home />} />
       </Routes>
     </LayoutMain>
   );
